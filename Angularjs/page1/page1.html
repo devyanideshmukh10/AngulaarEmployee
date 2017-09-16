@@ -1,0 +1,41 @@
+<h1> Employee List</h1>
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>Department</th>
+        <th>Phone</th>
+        <th width="200">Actions</th>
+    </tr>
+    </thead>
+
+
+    <tbody>
+    <tr ng-repeat="employee in data">
+        <td>
+            {{employee.name}}
+
+
+        </td>
+
+        <td>{{employee.department}}</td>
+        <td>{{employee.phone}}</td>
+
+        <td>
+            <a href="#!/page3/{{employee.$id}}" class="btn btn-info">Edit</a>
+
+
+            <a href=""  ng-click="deleteEmployee(employee)" class="btn btn-danger">Delete</a>
+
+        </td>
+
+
+    </tr>
+
+
+    </tbody>
+
+
+</table>

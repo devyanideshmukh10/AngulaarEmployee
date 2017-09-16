@@ -1,0 +1,66 @@
+<! DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>EMPLOYEE INFORMATION</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle Navigation</span>
+
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"> Employee Information </a>
+
+        </div>
+        <div id="navbar" class="collapse navbar-collapse"></div>
+        <ul class="nav navbar-nav navbar-right">
+            <!--<li class="active"><a href="#">HOME</a></li>-->
+            <li><a href="#!/page1">Home</a></li>
+            <li><a href="#!/page2">Add Employee</a></li>
+        </ul>
+    </div>
+</nav>
+
+<ng-view></ng-view>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src ="bower_components/angular/angular.js"></script>
+<script src ="bower_components/angular-route/angular-route.js"></script>
+<script src ="bower_components/firebase/firebase.js"></script>
+<script src ="bower_components/angularfire/dist/angularfire.js"></script>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDLZ1QFPTTwcck3MB0U6MG9r4c1CIAGPdI",
+        authDomain: "employees-4d20b.firebaseapp.com",
+        databaseURL: "https://employees-4d20b.firebaseio.com",
+        projectId: "employees-4d20b",
+        storageBucket: "employees-4d20b.appspot.com",
+        messagingSenderId: "887427378908"
+    };
+    firebase.initializeApp(config);
+</script>
+
+<script src="app.js"></script>
+<script src="page1/page1.js"></script>
+<script src="page2/page2.js"></script>
+<script src="page3/page3.js"></script>
+
+</body>
+</html>
+
